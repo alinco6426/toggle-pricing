@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Manrope&display=swap');
+body{
+    background-color: white;
+    background-image: url(bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'manrope';
+    background-size: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    background-image: url("pattern-circles.svg");
+    background-position: 50% 80px;
+    background-repeat: no-repeat;
+    background-size: 150px;
+}
+.header{
+    margin-top: 100px;
+    width: 500px;
+    text-align: center;
+}
+.header h1 {
+    margin: 20px 0;
+}
+#page-view{
+    color: hsl(221, 18%, 73%);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.main-content{
+    background-color: hsl(0, 0%, 100%);
+    width: 500px;
+    height: auto;
+    border-radius: 5px;
+    padding: 20px 20px 40px 20px;
+    box-shadow: 0 0 20px hsla(0, 100%, 0%, 0.1);
+    margin-top: 50px;
+}
+.views{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.toggle{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    padding: 0 50px;
+    margin-top: 30px;
+}
+.discount-div{
+    display: flex;
+}
+.discount{
+    font-size: 13px;
+    margin-left: 10px;
+    background-color: hsl(14, 92%, 95%);
+    color:  hsl(15, 100%, 70%);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+.trial-section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0 0px 0;
+}
+.trial-section p{
+    margin: 10px 0;
+}
+.trial-section img{
+    padding-right: 10px;
+}
+input[type = range]{
+    width: 100%;
+    appearance: none;
+    height: 12px;
+    outline: none;
+    opacity: 0.7;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+input[type=range]::-webkit-slider-thumb {
+        background-image: url(icon-slider.svg);
+        background-color:  hsl(230, 100%, 99%);;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 30px;
+        appearance: none;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        box-shadow: 0 0 5px hsla(0, 100%, 0%, 0.5);
+        border-radius: 50%;
+        z-index: 1;
+}
+input[type=range]::-webkit-slider-thumb:active{
+    background-color: hsl(174, 86%, 45%);
+}
+hr{
+    margin: 20px 0;
+    width: 100%;
+    border:  1px solid hsl(224, 65%, 95%);
+}
+button{
+    background-color:  hsl(227, 35%, 25%);
+    border-radius: 20px;
+    border: none;
+    color:  hsl(0, 0%, 100%);
+    padding: 10px;
+    width: 150px;
+    margin-top: 40px;
+    font-family: 'manrope';
+}
+.toggle-div {
+    width: 40px;
+    height: 16px;
+}
+
+.toggle-div label {
+    width: 100%;
+    background-color: hsl(174, 86%, 45%);
+    display: block;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-div label .toggle{
+    width: 15px;
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    height: 80%;
+    padding: 5px;
+    border-radius: 20px;
+    display: block;
+    top: -28px;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.toggle h5,#duration{
+     color: hsl(221, 18%, 73%);
+     font-weight: 500;
+     font-size: 14px;
+}
+#amount{
+    font-size: 30px;
+    font-weight: 600;
+    color: hsl(227, 35%, 25%);
+}
+input[type = checkbox]{
+    display: none;
+}
+input[type="checkbox"]:checked ~ .toggle {
+   transform: translateX(24px);
+}
+
+/* DESKTOP STYELES ENDS HERE  */
+
+/* MOBILE STYLES STARTS HERE  */
+
+  @media screen and (max-width:450px) {
+    body {
+        background-image: url(bg-pattern.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 500px;
+    }
+    .container {
+            display:block;
+            justify-content: none;
+            align-items: none;
+            align-content: none;
+            background-size: 150px;
+            width: 100%;
+            padding: 40px;
+            background-position: 150px 100px;
+            background-image: url("pattern-circles.svg");
+        }
+        .header {
+            margin-top: 100px;
+            width: 100%;
+            text-align: none;
+        }
+        .header h1{
+            font-size: 20px;
+        }
+        .header p{
+            font-size: 14px;
+            text-align: center;
+        }
+        .main-content {
+            width: 100%;
+            height: auto;
+            margin-top: 50px;
+            position: relative;
+            padding: 20px 0;
+        }
+    
+        .views {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            text-align: center;
+        }
+        .amount{
+            position: absolute;
+            top:30%;
+            right: 30%;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    
+        .toggle {
+            width: 100%;
+            text-align: none;
+            margin: 0;
+            padding: 20px ;
+            margin: 40px 0 20px 0;
+        }
+    
+        .discount-div {
+            display: flex;
+        }
+    
+        .discount {
+            font-size: 8px;
+            margin-left: 12px;
+            text-align: center;
+            padding:  5px;
+            border-radius: 14px;
+        }
+    
+        .trial-section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }    
+        .progress-div{
+            width: 100%;
+            padding: 20px;
+        }
+        input[type=range] {
+            width: 100%;
+            margin: 30px 0;
+        }
+        button {
+            background-color: hsl(227, 35%, 25%);
+            padding: 15px;
+            width: 250px;
+            margin-top: 30px;
+        }
+    
+        .toggle-div {
+            width: 40px;
+            height: 20px;
+        }
+    
+        .toggle-div label {
+            width: 100%;
+        }
+    
+        .toggle-div label .toggle {
+            top: -38px;
+        }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive pricing component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- CONTIANER DIV STARTS HERE  -->
+  <div class="container">
+
+    <!-- HEADER STARTS HERE  -->
+
+    <div class="header">
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card required.</p>
+    </div>
+
+    <!-- HEADER ENDS HERE  -->
+  
+    <!-- MAIN CONTENT STARTS HERE  -->
+
+    <div class="main-content">
+
+      <!-- CONTIANER FOR VIEWS-AMOUNT STARTS HERE  -->
+   <div class="views">
+    <p id="page-view"></p>
+    <p  class="amount"><span id="amount"></span><span id="duration"></span></p>
+   </div>
+        <!-- CONTIANER FOR VIEWS-AMOUNT ENDS HERE  -->
+
+        <!-- PROGRESS DISPLAYER STARTS HERE  -->
+   <div class="progress-div">
+    <input type="range" min="1" max="5" value="5" id="input">
+   </div>
+   <!-- PROGRESS DISPLAYER ENDS HERE  -->
+
+   <!-- PRICING TABLE SECTION STARTS HERE-->
+   <div class="toggle">
+
+    <div>
+      <h5> Monthly Billing</h5>
+    </div>
+   <!-- TOGGLE FUNCTION HANDLER STARTS HEERE  -->
+
+    <div class="toggle-div">
+      <label for="toggle">
+      <input type="checkbox" id="toggle">
+        <span class="toggle" id="toggle-btn"></span>
+      </label>
+    </div>
+
+    <!-- TOGGLE FUNCTION HANDLER ENDS HERE -->
+
+    <div class="discount-div">
+      <h5>  Yearly Billing</h5> 
+      <p class="discount">25% discount</p>
+    </div>
+
+   </div>
+   <!-- PRICING TABLE SECTION ENDS HERE -->
+
+   <hr>
+
+   <!-- TRIAL DETAILS SECTION START HERE  -->
+   <div class="trial-section">
+
+    <div>
+      <p> <img src="icon-check.svg" alt="icon-check"> Unlimited websites</p>
+      <p> <img src="icon-check.svg" alt="icon-check"> 100% data ownership</p>
+      <p> <img src="icon-check.svg" alt="icon-check">  Email reports</p>
+    </div>
+
+    <div>
+      <button type="button">Start my trial.</button>
+    </div>
+
+   </div>
+      <!-- TRIAL DETAILS SECTION ENDS HERE  -->
+
+    </div>
+      <!-- MAIN CONTENT ENDS HERE  -->
+  </div>
+  <!-- CONTIANER DIV END HERE  -->
+  <script src="file.js"></script>
+</body>
+</html>
